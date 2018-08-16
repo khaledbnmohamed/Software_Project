@@ -39,7 +39,7 @@ require 'includes/form_handlers/login_handler.php';
 			<br>
 			<div id="first">
 
-				<form action="register.php" method="POST">
+				<form action="Add_Patient.php" method="POST">
 					<input type="email" name="log_email" placeholder="Email Address" value="<?php 
 					if(isset($_SESSION['log_email'])) {
 						echo $_SESSION['log_email'];
@@ -75,6 +75,8 @@ require 'includes/form_handlers/login_handler.php';
 					}
 					$con->close();
 					?>
+					<input type="submit" name="register_button" value="Add New Patient">
+
 
 				</form>
 

@@ -11,7 +11,7 @@ if(isset($_POST['login_button'])) {
 		$_SESSION['user_id'] = $user_id;
 
 		if($query = "SELECT * FROM user WHERE email='$email' AND Admin_auth='1'"){
-		header("Location: doctor.php");
+		header("Location: nurse.php");
 	}
 	else if ($query = "SELECT * FROM user WHERE email='$email' AND Admin_auth='0'"){
 		header("Location: nurse.php");
