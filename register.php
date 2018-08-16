@@ -15,6 +15,7 @@ require 'includes/form_handlers/login_handler.php';
 
 	<link rel="shortcut icon" href="includes/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="includes/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
 
@@ -100,7 +101,8 @@ require 'includes/form_handlers/login_handler.php';
 					<br>
 					<input type="password" name="reg_password2" placeholder="Confirm Password" required>
 					<br>
-					
+					<input type="number" name="reg_Authentication" placeholder="Your Authentication Code" required>
+					<br>
 					<input type="submit" name="register_button" value="Register">
 					<br>
 
