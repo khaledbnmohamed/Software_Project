@@ -1,22 +1,16 @@
 <?php
 require 'doctor.php';
 
-			$sql = "SELECT Fees FROM visits ";
-					$result = $con->query($sql);
-					$total=0;
+		
+					$result = mysql_query("SELECT SUM(Fees) AS value_sum FROM visits"); 
+					$row = mysql_fetch_assoc($result); 
+					$sum = $row['value_sum'];
+					Echo "<br";
+					Echo "<br";
+					Echo "<br";
 
-
-					if ($result->num_rows > 0) {
-					    // output data of each row
-					   
-							while($row = $result->fetch_assoc()) {
-					   		$total = $total + $row["Fees"];
-					        
-					    }
-			        	echo "Total is "+ $total ;
-
-
-}
+					Echo "Total Today is" . $sum ;
+					$con->close();
 
 ?>
 

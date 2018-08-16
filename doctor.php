@@ -53,6 +53,8 @@ require 'includes/form_handlers/login_handler.php';
 					$Calc = false ; 
 					$total=0;
 					$sql = "SELECT * FROM visits ";
+					$sql4 = "SELECT CAST(SUM(Fees) as INT) FROM visits ";
+
 					$result = $con->query($sql);
 
 					if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register_button']))
@@ -79,12 +81,11 @@ require 'includes/form_handlers/login_handler.php';
 					 #       	$total = $total + $row["MyFees"];
 					        
 					    }
-			        #	echo "Total is "+ $total ;
+			        	#echo "Total is "+ $sql4 ;
 
 					} else {
 					    echo "0 results";
 					}
-					$con->close();
 					?>
 					<br>
 					<br>
